@@ -121,10 +121,6 @@ if($('.main-bundle-nav-list').length) {
 // video
 if($('.video-block').length) {
 
-
-
-
-
   $('.video-block').each(function() {
 
     const video = $(this).find('.video-play');
@@ -164,8 +160,6 @@ if($('.video-block').length) {
   })
   
 
-
-
   // const video = document.getElementsByClassName('video-play');
   // const playButton = document.getElementsByClassName('video-block');
 
@@ -199,6 +193,19 @@ if($('.video-block').length) {
   // if (window.innerWidth <= 767) {
   //   video.controls = true;
   // }
+}
+
+
+if (document.referrer === "https://art.mixit.ru/") {
+
+    $("a.header-back").click(function(event) {
+      event.preventDefault();
+      window.history.back();
+    });
+    
+    console.log(document.referrer)
+} else {
+  console.log('link')
 }
 
 // tabs
